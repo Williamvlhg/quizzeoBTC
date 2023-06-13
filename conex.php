@@ -18,9 +18,15 @@
 
      <label for="pwd">Mot de passe</label>
      <input type="password" name="pwd" ><br>
-     <?php 
-$nom=$_POST['name'];
-$mdp=$_POST['password'];
+    
+
+     <input type="submit" name="submit" value="Valider">
+
+
+    </form>
+    <?php 
+$nom = $_POST['name'];
+$mdp = $_POST['password'];
 
 if (isset($_POST['submit'])){
     echo "Enregistré";
@@ -31,13 +37,6 @@ else {
 
   
 ?>
-
-     
-
-     <input type="submit" name="submit" value="Valider">
-
-
-    </form>
 <?php include "processusconnexion.php"; ?>
 
 
