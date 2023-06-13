@@ -1,0 +1,56 @@
+body{
+    animation-duration: 4s;
+    animation-name: carrousel;
+}
+@keyframes carrousel{
+    
+ 0% {background-image: url(c:\Users\esther\Pictures\dynamic-dark-pattern-background_93536-44.webp) } 
+ 25%{background-image: url(c:\Users\esther\Pictures\Diseño-de-videojuegos-img-450x450-351x351.png)}
+50%{background-image:url(c:\Users\esther\Pictures\inline_image_preview.webp)}
+    
+}
+
+
+
+img{
+    width: 400px;
+    height: 300px;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation-duration:3s;
+  animation-name: slidein;
+ }
+ @keyframes slidein {
+    from{
+        margin-bottom: 100%;
+        width: 300%;
+    }
+    to {
+        margin-bottom: 0%;
+        width: 100%;
+    }
+ }
+ 
+ 
+ 
+ 
+
+button{
+    width: 100px;
+    height: 70px;
+    border-radius: 30%;
+   display: block;
+  margin-left:auto;
+  margin-right: auto;
+  cursor: pointer;
+  color:rgb(240, 242, 244);
+  background-color: rgb(34, 91, 224);
+  box-shadow: 0 9px #403f3f;
+  
+}button:active{
+        background-color: #3e8e41;
+        box-shadow: 0 5px #403f3f;
+        transform: translateY(4px);
+}
+
