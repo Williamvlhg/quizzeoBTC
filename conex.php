@@ -8,21 +8,26 @@
 <body>
 <img src="c:\Users\esther\Pictures\Image2.png" alt="">
     <h4>Inscription</h4>
-    <form action="" method="get">
+    <form action="" method="post">
     
      <label for="name">Pseudo</label>
-     <input type="name" name="name"><br>
+     <input type="text" name="name"><br>
+
+     <label for="email">E-mail</label>
+     <input type="email" name="email"><br>
 
      <label for="pwd">Mot de passe</label>
-     <input type="pwd" name="pwd" ><br>
+     <input type="password" name="pwd" ><br>
+
 
      
 
-     <input type="submit" value="Valider">
+     <input type="submit" name="submit" value="Valider">
 
 
     </form>
-  
+<?php include "processusconnexion.php"; ?>
+
 
 </body>
 </html>
