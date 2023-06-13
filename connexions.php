@@ -19,15 +19,19 @@
      <label for="pwd">Mot de passe</label>
      <input type="password" name="pwd" ><br>
 
-
-     
      <input type="submit" name="submit" value="Valider">
 
 
     </form>
+<<<<<<< HEAD:connexion.php
     <?php
     $nom=$_POST['name'];
 $mdp=$_POST['password'];
+=======
+    <?php 
+$nom = $_POST['name'];
+$mdp = $_POST['password'];
+>>>>>>> 3e24fa86459c315bf990ddfe69a9acdb0b72a78c:conex.php
 
 if (isset($_POST['submit'])){
     echo "Enregistré";
@@ -36,7 +40,11 @@ else {
     echo "Pas enregistré";
 }
 ?>
+<<<<<<< HEAD:connexion.php
 
+=======
+<?php include "processusconnexion.php"; ?>
+>>>>>>> 3e24fa86459c315bf990ddfe69a9acdb0b72a78c:conex.php
 
 
 </body>
