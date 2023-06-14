@@ -1,14 +1,15 @@
 body{
-    animation-duration: 4s;
-    animation-name: carrousel;
+    animation-duration: 10s;
+    animation-name: color;
 }
-@keyframes carrousel{
+@keyframes color{
     
- 0% {background-image: url(c:\Users\esther\Pictures\dynamic-dark-pattern-background_93536-44.webp) } 
- 25%{background-image: url(c:\Users\esther\Pictures\Diseño-de-videojuegos-img-450x450-351x351.png)}
-50%{background-image:url(c:\Users\esther\Pictures\inline_image_preview.webp)}
-    
-}
+ 0% {background-color: rgb(106, 0, 255)};
+  25%{background-color: rgb(7, 7, 234);}  
+  50%{background-color: rgb(7, 194, 166);} 
+  100%{background-color: rgb(10, 223, 102);} 
+ }   
+
 
 
 
