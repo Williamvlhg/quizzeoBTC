@@ -1,0 +1,57 @@
+body{
+    animation-duration: 10s;
+    animation-name: color;
+}
+@keyframes color{
+    
+ 0% {background-color: rgb(106, 0, 255)};
+  25%{background-color: rgb(7, 7, 234);}  
+  50%{background-color: rgb(7, 194, 166);} 
+  100%{background-color: rgb(10, 223, 102);} 
+ }   
+
+
+
+
+img{
+    width: 400px;
+    height: 300px;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation-duration:3s;
+  animation-name: slidein;
+ }
+ @keyframes slidein {
+    from{
+        margin-bottom: 100%;
+        width: 300%;
+    }
+    to {
+        margin-bottom: 0%;
+        width: 100%;
+    }
+ }
+ 
+ 
+ 
+ 
+
+button{
+    width: 100px;
+    height: 70px;
+    border-radius: 30%;
+   display: block;
+  margin-left:auto;
+  margin-right: auto;
+  cursor: pointer;
+  color:rgb(240, 242, 244);
+  background-color: rgb(34, 91, 224);
+  box-shadow: 0 9px #403f3f;
+  
+}button:active{
+        background-color: #3e8e41;
+        box-shadow: 0 5px #403f3f;
+        transform: translateY(4px);
+}
+
