@@ -27,6 +27,7 @@
 
 
     </form>
+<<<<<<< Updated upstream:connexions.php
 
     <?php
     $nom=$_POST['name'];
@@ -46,6 +47,15 @@ else {
 ?>
 
 <?php include "processusconnexion.php"; ?>
+=======
+
+   
+
+
+<?php include "processusconnexion.php"; ?>
+
+
+>>>>>>> Stashed changes:Prototype1/connexions.php
 
 </body>
 </html>
