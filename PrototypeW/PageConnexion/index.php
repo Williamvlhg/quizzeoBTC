@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-<img src="c:\Users\esther\Pictures\Image2.png" alt="">
-    <h4>Inscription</h4>
-    <form action="" method="post">
+    <?php if (isset($_SESSION['Email'])){
+        echo "Vous êtes connecté en tant que : ". $_SESSION['Email'];
+        }
+        else
+        { ?> 
+                    <h4>Connexion</h4>
+    <form  method="post">
     
-     <label for="name">Pseudo</label>
-     <input type="text" name="name"><br>
-
      <label for="email">E-mail</label>
      <input type="email" name="email"><br>
 
@@ -23,8 +25,15 @@
 
 
     </form>
+            <?php
+        }?>
 
-   
+    <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
+         <input type="submit" name='deconnexion' value="Déconnexion">
+    </form>
+    <?php include 'processusdeconnexion.php';?>
+
+    
 
 
 <?php include "processusconnexion.php"; ?>

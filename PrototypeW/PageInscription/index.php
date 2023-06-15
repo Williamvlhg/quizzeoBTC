@@ -18,26 +18,18 @@
 
      <label for="pwd">Mot de passe</label>
      <input type="password" name="pwd" ><br>
-    
 
      <input type="submit" name="submit" value="Valider">
 
 
     </form>
-    <?php 
-$nom = $_POST['name'];
-$mdp = $_POST['password'];
 
-if (isset($_POST['submit'])){
-    echo "Enregistré";
-}
-else {
-    echo "Pas enregistré";
-}
+   
 
-  
-?>
-<?php include "processusconnexion.php"; ?>
+
+<?php include "processusinscription.php"; ?>
+
+
 
 </body>
 </html>
