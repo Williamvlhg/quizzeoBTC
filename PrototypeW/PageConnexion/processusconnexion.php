@@ -22,7 +22,7 @@
                 }
                 echo $e;
                 echo $p;
-
+                header('location: ../PageListing/index.php');
             } else
             {
                 echo "Identifiant ou mot de passe erroné"; 
