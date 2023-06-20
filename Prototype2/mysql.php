@@ -1,32 +1,36 @@
-<?php include('inscription.php');
-class mysql{
-    private $host = 'localhost';
-    private $name = 'utilisateurs';
-    private $user ='root';
-    private $pass ='root';
-    private $connexion;
+<?php
 
-    function __construct($host = null , $name = null , $user = null, $pass = null){
-        if ($host != null){
-            $this->host = $host;
-            $this->name = $name;
-            $this->user = $user;
-            $this->pass = $pass;
-        }
-        try{
-            $this->connexion = new PDO('mysql:host=' , $this->host,';dbname=' , $this->name,
-            $this->user , $this->pass , array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8MB3',
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
-        }catch (PDEExeption $e){
-            echo 'Erreur : Impossible de se connecter à la BDD !';
-            die();
-        }
-        public function DB(){
-            $this->connexion;
-        }
-    }
-    $DBB = new mysql();
-    $DB = $DBB->DB(); 
+$servername = "localhost";
+
+$username = "root";
+
+$password = "";
+
+
+// Create connection
+
+$conn = new mysqli($servername, $username, $password);
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=Quizzeo", $username, $password);
+
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+
+  } catch(PDOException $e) {
+
+    echo "Connection failed: " . $e->getMessage();
+  }
+
+
+// Check connection
+
+if ($conn->connect_error) {
+
+  die("Connection failed: " . $conn->connect_error);
+
 }
+
+echo "Connected successfully";
 
 ?>

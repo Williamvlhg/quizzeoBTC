@@ -1,9 +1,14 @@
+body{
+    background-color:   #086375 ;
+}
 #Countdown{
     position: sticky;
     margin-top: 5%;
     margin-left: 90%;
     padding-top: 10px;
+
     border: solid rgb(15, 80, 211) 1px;
+
     display: flex;
     justify-content: center;
     border-radius: 50%;
