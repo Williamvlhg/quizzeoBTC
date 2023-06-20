@@ -14,6 +14,7 @@
 <body>
     
 <img src="c:\Users\esther\Pictures\Image2.png" alt="">
+
     <h4>Inscription</h4><br><br>
   
     <form action="" method="get">

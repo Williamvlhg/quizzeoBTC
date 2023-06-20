@@ -6,6 +6,7 @@
             $u = $_POST["name"];
             $e = $_POST["email"];
             $p = $_POST["pwd"];
+<<<<<<< Updated upstream
             $p2 = $_POST["pwd2"];
         if($p2 != $p){
             echo "Vos mots de passes ne correspondent pas";
@@ -21,3 +22,16 @@
     }
 
     
+=======
+            $p = password_hash($p, PASSWORD_DEFAULT);
+
+        $sql = $db->prepare("INSERT INTO user(pseudo, email, password) VALUES ( :pseudo, :email, :password);");
+        $sql -> execute([
+            'pseudo' => $u,
+            'email' => $e,
+            'password' => $p
+        ]);
+    }
+
+    ?>
+>>>>>>> Stashed changes

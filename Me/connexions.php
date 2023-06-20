@@ -11,7 +11,7 @@
 </head>
 <body>
 <img src="c:\Users\esther\Pictures\Image2.png" alt="">
-    <h4>°onnexion</h4>
+    <h4>Connexion</h4>
     <form action="" method="post">
     
      <label for="name">Pseudo</label>
