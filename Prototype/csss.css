@@ -1,0 +1,42 @@
+body{
+    background-color: #086375;
+}
+
+
+#Countdown{
+    position: sticky;
+    margin-top: 5%;
+    margin-left: 90%;
+    padding-top: 7px;
+    border: solid rgb(215, 27, 27) 4px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    font-family: fantasy;
+    color:blanchedalmond;
+    background-color:black;
+    font-size: 54px;
+
+
+}
+.testquizz{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Allerta';
+    color:blanchedalmond;
+    font-size: 30px;
+    
+}
+#reponses{
+    border: 2px solid black;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 25%;
+    padding-left: 25%;
+}
