@@ -22,26 +22,9 @@
         </button>
 
     <div>
-        <form>
-            <label for="Nquizz">Nom de votre quizz</label>
-            <textarea name="NQuizz"></textarea> <br>
-            <label for="Nquestion">Intutilé de votre question</label> 
-            <textarea name="NQuestion"></textarea> <br>
-            <label for="rep1">Intutilé de votre réponse 1</label>
-            <input type="text" name="rep1"> <br>
-            <label for="rep2">Intutilé de votre réponse 2</label>
-            <input type="text" name="rep2"> <br> 
-            <label for="rep3">Intutilé de votre réponse 3</label>
-            <input type="text" name="rep3"> <br>
-            <label for="rep4">Intutilé de votre réponse 4</label>
-            <input type="text" name="rep4"> <br>
-            <input type="submit" name='vquiz' value="Valider le quizz">
-        </form>
-    </div>
+            <h1> Vous allez devenir un quizzeur </h1>
 
-    <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
-         <input type="submit" name='deconnexion' value="Déconnexion">
-    </form>
-    <?php include '../PageConnexion/processusdeconnexion.php';?>
+    </div>
+    <?php include '../PageConnexion/processusrolequizzeur.php';?>
 </body>
 </html>
