@@ -2,6 +2,9 @@ body{
     background-color: #086375;
 }
 
+.toto{
+    background-color:#353a41 ;
+}
 
 #Countdown{
     position: sticky;
@@ -28,15 +31,18 @@ body{
     transform: translate(-50%, -50%);
     font-family: 'Allerta';
     color:blanchedalmond;
-    font-size: 30px;
+    font-size: 40px;
     
 }
-#reponses{
-    border: 2px solid black;
+
+.row{
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-right: 25%;
-    padding-left: 25%;
+    font-size: 35px;
+    font-family: 'Allerta';
+    justify-content: center;
+ 
 }
+
