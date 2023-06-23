@@ -7,12 +7,12 @@
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-        <link rel="stylesheet" href="csss.css">
+        <link rel="stylesheet" href="css1.css">
     
     </head>
      <body>
 
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg 6g-dark navbar-dark toto">
 
 <!-- Brand/logo -->
 
@@ -44,8 +44,7 @@
 
 </ul>
 
-</nav>
-        
+</nav>  
         <form method="post">
             <div class="testquizz">
             <label> "Inserez une question ?" </label>
@@ -53,51 +52,17 @@
             </div>
     
         </form>
-        <br>
-        <div class="row">
-            <div class="col  border"></div>
-            <div class="col  border"><h3>reponse 1   </h3></div>
-            <div class="col  border"></div>
-        </div>
-        <div class="row">
-            <div class="col  border"></div>
-            <div class="col  border"><h3>reponse 2   </h3></div>
-            <div class="col  border"></div>
-        </div>
-        <div class="row">
-            <div class="col  border"></div>
-            <div class="col  border"><h3>reponse 3  </h3></div>
-            <div class="col  border"></div>
-        </div>
-        <div class="row">
-            <div class="col  border"></div>
-            <div class="col  border"><h3>reponse 4   </h3></div>
-            <div class="col  border"></div>
-        </div>
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="container text-center">
+    <div class="row w-50"> 
+      <button type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 1 </button>
+      <button type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 2 </button>
+      <div class="w-100"></div>
+      <button type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 3 </button>
+      <button type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 4 </button>
+    </div>
+  </div>
 
         <div class="Timer">
             <p id="Countdown"></p>
