@@ -41,19 +41,12 @@
     </div>
     </nav>
     <br><br>
-
+    <form method="post">
     <div class="container">
         <div class="row">
             
             <div class="col-3 align-self-start border rounded-left rounded-right-75 bg-danger ">
-<<<<<<< Updated upstream
-                <a  class="nav-link" onclick="listequizz.php" href="#">SPORT</a>
-=======
-                <a  id="start"  class="nav-link" href="#" onclick="jouer();">SPORT</a>
-           
-               
-             
->>>>>>> Stashed changes
+                <a  class="nav-link" name="quizz" href="../PageJeu/Prototype/test.php" value="1">SPORT</a>
             </div>
             
             
@@ -61,35 +54,25 @@
         </div><br>
         <div class="row">
             <div class="col-3 align-self-middle border rounded-left rounded-right-75 bg-secondary">
-<<<<<<< Updated upstream
-                <a  class="nav-link" onclick="listequizz.php" href="#">GEOGRAPHIE</a>
-=======
-                <a  id="start" class="nav-link" href="#" onclick="jouer()">GEOGRAPHIE</a>
->>>>>>> Stashed changes
+
+
+                <a  id="start" class="nav-link" name="quizz" href="../PageJeu/Prototype/test.php" value=2>GEOGRAPHIE</a>
                 
 
             </div>
         </div><br>
         <div class="row">
             <div class="col-3 align-self-center border rounded-left rounded-right-75 bg-success">
-<<<<<<< Updated upstream
-                <a  class="nav-link" onclick="listequizz.php" href="#">FRANCAIS</a>
-=======
-                <a id="start" class="nav-link" href="#" onclick="jouer()">FRANCAIS</a>
->>>>>>> Stashed changes
+                <a  class="nav-link"  name="quizz" href="../PageJeu/Prototype/test.php" value=3>FRANCAIS</a>
             
             </div>
 
         </div><br>
         <div class="row">
             <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-warning">
-<<<<<<< Updated upstream
-                <a  class="nav-link" onclick="listequizz.php" href="#">MATHEMATIQUES</a>
-=======
-                <a id="start" class="nav-link" href="#"  onclick="jouer()">MATHEMATIQUES</a>
->>>>>>> Stashed changes
+                <a  class="nav-link"  name="quizz" href="../PageJeu/Prototype/test.php" value=4>MATHEMATIQUES</a>
             </div>
-        
+    </form>
         </div><br>
         <div class="row">
             <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-dark">
