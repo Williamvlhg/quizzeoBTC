@@ -1,35 +1,21 @@
 body{
     background-color: #086375;
-    /*background-image: radial-gradient(rgb(221, 201, 201) 1px ,transparent 0),
-   radial-gradient(rgb(255, 255, 0) 1px, transparent 0);
-    background-size: 42px 42px;
-    background-position: 0 0 ,21px 21px;
-    animation: infinite point 5s alternate;
-}
-@keyframes point{
-    
-  
-    to{
-        background-position: 21px 21px, 0 0;
-    }
-*/
-}
-
-div{
-   margin-top:20px;
-    background-color: rgb(214, 207, 199) ;
-   padding:50px 470px;
-   border-radius: 15px;
-   min-width: 300px;
- 
-  
    
-    
-     
 }
 
+.divi{
+    margin-top: 20px;
+    background-color: rgb(214, 207, 199);
+  padding:50px 470px;
+ border-radius: 15px;
+ 
+}
+.conex{
+    margin-left: 70px;
+    margin-right: 70px;
+}
 h4{
-    font-family: fantasy;
+    font-family: "Allerta";
     text-shadow: 3px 3px 3px #403f3f;
     text-align: center;
     font-size: 300%;
@@ -55,12 +41,6 @@ label{
         transform: translateY(4px);
 }
 
-#nom{
-  border-radius: 5px; 
-  display: fixed;
-  right: 15px;
-   
-}
 #mail{
     border-radius: 5px;
     display:fixed;
