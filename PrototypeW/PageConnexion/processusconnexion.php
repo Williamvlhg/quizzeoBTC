@@ -18,7 +18,6 @@
                 $data = $result->fetchAll();
                 if(password_verify($p,$data[0]['mdp']))
                 {
-                    echo "Connexion effectuée";
                     $_SESSION['email'] = $e;
                     header('location: ../PageListing/index.php');
                 }
@@ -28,6 +27,6 @@
                 echo "Identifiant ou mot de passe erroné"; 
             }
     }
-    
+?>
 
     

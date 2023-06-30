@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +12,8 @@
 </head>
 <body>
 
+   <?php include 'verification.php';
+    echo $_SESSION['email'];?>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
             <img src="c:\Users\esther\Pictures\Image1.png" alt="logo" style="width: 70px;">
@@ -22,16 +24,17 @@
 
     <div class="collapse navbar-collapse" id="collapseNavbar">
         <ul class="navbar-nav">
+        <li class="nav-item">
+            <a  class="nav-link" href="index.php">Accueil</a>
+        </li>
+    
             <li class="nav-item">
             <a  class="nav-link" href="#">Classements</a>
         </li>
         <li class="nav-item">
-            <a  class="nav-link" href="#">Quiz enregistrés</a>
+            <a  class="nav-link" href="#" <?php if($data[0]['Role'] != 2 && $data[0]['Role'] != 3) {?>style="display:none"<?php }?>>Quiz enregistrés</a>
         </li>
-        <li class="nav-item">
-            <a  class="nav-link" href="accueil.php">Accueil</a>
-        </li>
-    
+     
 
         </ul>
 
@@ -43,10 +46,7 @@
         <div class="row">
             
             <div class="col-3 align-self-start border rounded-left rounded-right-75 bg-danger ">
-                <a  class="nav-link" href="#">SPORT</a>
-           
-               
-             
+                <a  class="nav-link" onclick="listequizz.php" href="#">SPORT</a>
             </div>
             
             
@@ -54,30 +54,40 @@
         </div><br>
         <div class="row">
             <div class="col-3 align-self-middle border rounded-left rounded-right-75 bg-secondary">
-                <a  class="nav-link" href="#">GEOGRAPHIE</a>
+                <a  class="nav-link" onclick="listequizz.php" href="#">GEOGRAPHIE</a>
                 
 
             </div>
         </div><br>
         <div class="row">
             <div class="col-3 align-self-center border rounded-left rounded-right-75 bg-success">
-                <a  class="nav-link" href="#">FRANCAIS</a>
+                <a  class="nav-link" onclick="listequizz.php" href="#">FRANCAIS</a>
             
             </div>
 
         </div><br>
         <div class="row">
             <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-warning">
-                <a  class="nav-link" href="#">MATHEMATIQUES</a>
+                <a  class="nav-link" onclick="listequizz.php" href="#">MATHEMATIQUES</a>
             </div>
-
+        
+        </div><br>
+        <div class="row">
+            <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-dark">
+                <a  class="nav-link" href="listequizz.php">QUIZZ DES QUIZZEURS</a>
+            </div>
+        
         </div><br>
 
 
     </div>
+    <form method="post" action="../PageTransiQuizzeur/index.php" class='btn btn-light'>
+         <input type="submit"  name='CreaQuizz' value="Créer un quizz">
+    </form>
     <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
          <input type="submit" name='deconnexion' value="Déconnexion">
     </form>
-    <?php include '../PageConnexion/processusdeconnexion.php';?>
+    <?php include 'processusdeconnexion.php'; ?>
+  
 </body>
 </html>

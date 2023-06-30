@@ -25,6 +25,6 @@
             <h1> Vous allez devenir un quizzeur </h1>
 
     </div>
-    <?php include '../PageConnexion/processusrolequizzeur.php';?>
+    <?php include 'processusrolequizzeur.php';?>
 </body>
 </html>
