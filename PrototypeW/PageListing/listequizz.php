@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,8 +57,8 @@
     <div id="resultats">
         <div id="nbr"><?php count($tab)." ".(count($tab)>1?"résultats trouvés":"résultat trouvé") ?></div>
             <ol>
-                <?php for($i=0; $i<count($tab); $i++){?>
-                <li><a href="jouer.php"><?php echo $tab[$i]["Titre"]?></a></li>
+                <?php for($i=0; $i<count($tab); $i++){ $idquizz = $tab[$i]["IdQz"];?>
+                <li><a href="debutjeu.php?idquizz=<?php echo $idquizz; ?>"><?php echo $tab[$i]["Titre"]?></a></li>
                 <?php } ?>
             </ol>
     </div> 

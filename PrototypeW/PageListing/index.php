@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +34,12 @@
         <li class="nav-item">
             <a  class="nav-link" href="#" <?php if($data[0]['Role'] != 2 && $data[0]['Role'] != 3) {?>style="display:none"<?php }?>>Quiz enregistrés</a>
         </li>
+        <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
+            <a  class="nav-link" href="">Liste des Quizz</a>
+        </li>
+        <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
+            <a  class="nav-link" href="">Liste des Utilisateurs</a>
+        </li>
      
 
         </ul>
@@ -46,31 +52,28 @@
         <div class="row">
             
             <div class="col-3 align-self-start border rounded-left rounded-right-75 bg-danger ">
-                <a  class="nav-link" name="quizz" href="../PageJeu/Prototype/test.php" value="1">SPORT</a>
+                <a  class="nav-link myDiv" name="quizz"  data-idquizz="0" >SPORT</a>
             </div>
-            
-            
-
         </div><br>
         <div class="row">
             <div class="col-3 align-self-middle border rounded-left rounded-right-75 bg-secondary">
 
 
-                <a  id="start" class="nav-link" name="quizz" href="../PageJeu/Prototype/test.php" value=2>GEOGRAPHIE</a>
+                <a  id="start" class="nav-link myDiv" name="quizz" data-idquizz="1" >GEOGRAPHIE</a>
                 
 
             </div>
         </div><br>
         <div class="row">
             <div class="col-3 align-self-center border rounded-left rounded-right-75 bg-success">
-                <a  class="nav-link"  name="quizz" href="../PageJeu/Prototype/test.php" value=3>FRANCAIS</a>
+                <a  class="nav-link myDiv"  name="quizz" data-idquizz="2">FRANCAIS</a>
             
             </div>
 
         </div><br>
         <div class="row">
             <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-warning">
-                <a  class="nav-link"  name="quizz" href="../PageJeu/Prototype/test.php" value=4>MATHEMATIQUES</a>
+                <a  class="nav-link myDiv"  name="quizz"data-idquizz="3">MATHEMATIQUES</a>
             </div>
     </form>
         </div><br>
@@ -89,7 +92,7 @@
     <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
          <input type="submit" name='deconnexion' value="Déconnexion">
     </form>
-    <?php include 'processusdeconnexion.php'; ?>
-  
+    <?php include 'processusdeconnexion.php';?> 
+    <script src="index.js"></script>
 </body>
 </html>

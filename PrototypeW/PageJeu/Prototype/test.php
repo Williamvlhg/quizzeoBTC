@@ -1,3 +1,7 @@
+<?php session_start();
+echo $_SESSION['email'];
+var_dump($_SESSION)?>
+
 <!DOCTYPE >
 <html >
     <head>
@@ -54,9 +58,13 @@
         <form method="post">
       <input id="submit" type="submit" name="submit" value="Valider">
     </form>
-     <?php include "database.php"; 
+     <?php include "database.php";
+  
+            
     global $db;
-    $idquizz = 3;
+    if(isset($_SESSION['idquizz'])){
+
+    $idquizz = $_SESSION['idquizz'];
      if(isset($_POST["submit"])){
      $req = $db->prepare("SELECT intituléQuestion FROM question WHERE IdQuizz like :IdQuizz");
      $req->setFetchMode(PDO::FETCH_ASSOC); 
@@ -80,6 +88,7 @@
       }
 
      }
+    } else echo "erreur";
      ?>
   
         <script src="../PageListing/test.js"></script>
