@@ -5,7 +5,7 @@ if (isset($_POST['idquizz'])) {
   $_SESSION['idquizz'] = $idquizz;
   echo $_SESSION['idquizz'];
   var_dump($_SESSION);
-  header('location: ../PageJeu/Prototype/test.php');
+  header('location: ../PageJeu/test.php');
 }
 
 if (isset($_GET['idquizz'])) {
@@ -13,6 +13,6 @@ if (isset($_GET['idquizz'])) {
     $_SESSION['idquizz'] = $idquizz - 1;
     echo $_SESSION['idquizz'];
     var_dump($_SESSION);
-    header('location: ../PageJeu/Prototype/test.php');
+    header('location: ../PageJeu/test.php');
   }
 ?>

@@ -1,8 +1,10 @@
-<?php           session_start();   
+<?php            
+                session_start();
                 include "database.php";
                 global $db;
                 if(!isset($_SESSION['email'])){
                     header("Location: ../PageConnexion/index.php");
+                    echo $_SESSION['email'];
                     exit;
                 }
                 $sql = "SELECT * FROM user WHERE Email = :Email"; 
@@ -14,8 +16,4 @@
                 {
                     $data = $result->fetchAll();
                 } 
-                if($data[0]['Role'] != 2 && $data[0]['Role'] != 3){
-                    header("Location: ../PageListing/index.php");
-                    exit;
-                }
 ?>
