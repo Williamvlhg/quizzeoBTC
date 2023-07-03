@@ -26,21 +26,15 @@ var timeLeft = 30;
 
 
 
-
+//Duexième code js (essaie)
 
 const gamer = document.getElementById('game')
-//  var NQuestion = document.getElementById('intitule')
-//  var NReponse = document.getElementById('ans')
- 
-//  let questionpose,currentQuestionIndex
-
 function jouer(){
 window.location.href ="jeux.html"
 console.log('Joue le jeu')
-// questionpose = questions.sort(()=> Math.random() - .5)
-// currentQuestionIndex = 0
+
  questionSuivante()
- //    montre(questionpose[currentQuestionIndex])
+ 
  
 }
   var questionIndex = 1;
@@ -70,7 +64,7 @@ console.log('Joue le jeu')
     }
     Nquestions[questionIndex -1].computedStyleMap.display = "block";
     Nreponses[questionIndex-1].className += "active";
-// NQuestion.innerText = questions.question
+
  }
 
 
@@ -93,7 +87,7 @@ console.log('Joue le jeu')
 
 
 
-
+//Premier code js (essaie)
 
 const jeu = document.getElementById("start")
 const questionElement = document.getElementById('NomQuestion')

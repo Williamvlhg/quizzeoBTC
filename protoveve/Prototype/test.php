@@ -14,13 +14,13 @@
 
      <?php include "database.php"; 
 global $db;
-     if(isset($_POST["submit"])){
-      echo"ok";
-      $question = $_POST["NomQuestion"];
-      $reponse1 = $_POST["next"];
-      $reponse2 = $_POST["next"];
-      $reponse3 = $_POST["next"];
-      $reponse4 = $_POST["next"];
+    //  if(isset($_POST["submit"])){
+    //   echo"ok";
+    //   $question = $_POST["NomQuestion"];
+    //   $reponse1 = $_POST["next"];
+    //   $reponse2 = $_POST["next"];
+    //   $reponse3 = $_POST["next"];
+    //   $reponse4 = $_POST["next"];
      
      $req = $db->prepare("SELECT * FROM question (inttuléQuestion, Difficulte ) VALUES ( :ntituléQuestion, :Difficulte);")
      $requete = $db->prepare("SELECT * FROM choix (reponse, Breponse ,IDQuestion) VALUES ( :intituléQuestion, :Difficulte :IDQuestion);")
@@ -32,7 +32,7 @@ global $db;
       'reponse' => $reponse2,
       'reponse' => $reponse3,
       'reponse' => $reponse4,
-      ]);
+      ]); 
     
 
   } 
