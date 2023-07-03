@@ -37,7 +37,7 @@
             <a  class="nav-link" href="">Liste des Quizz</a>
         </li>
         <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
-            <a  class="nav-link" href="">Liste des Utilisateurs</a>
+            <a  class="nav-link" href="../PageAdminModer/index.php">Liste des Utilisateurs</a>
         </li>
      
 

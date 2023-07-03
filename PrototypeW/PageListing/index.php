@@ -27,7 +27,7 @@
         </div><br>
         <div class="row">
             <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-warning">
-                <a  class="nav-link myDiv"  name="quizz"data-idquizz="3">MATHEMATIQUES</a>
+                <a  class="nav-link myDiv"  name="quizz" data-idquizz="3">MATHEMATIQUES</a>
             </div>
     </form>
         </div><br>

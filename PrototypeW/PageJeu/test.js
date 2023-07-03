@@ -95,53 +95,53 @@ console.log('Joue le jeu')
 
 
 
-// const jeu = document.getElementById("start")
-// const questionElement = document.getElementById('NomQuestion')
-// const reponseElement = document.getElementById('answer')
+const jeu = document.getElementById("start")
+const questionElement = document.getElementById('NomQuestion')
+const reponseElement = document.getElementById('answer')
 
-// let questionpose, currentQuestionIndex;
-// jeu.addEventListener('click',jouer)
+let questionpose, currentQuestionIndex;
+jeu.addEventListener('click',jouer)
 
-// function game(){
-// window.location.href="../Prototype/test.php";
-// }
-//  function jouer(){
-//  console.log("joue le jeu")
+function game(){
+window.location.href="../Prototype/test.php";
+}
+ function jouer(){
+ console.log("joue le jeu")
  
-//  questionpose = questions.sort(()=> Math.random() - .5)
-//      currentQuestionIndex = 0
-//   suivant()
+ questionpose = questions.sort(()=> Math.random() - .5)
+     currentQuestionIndex = 0
+  suivant()
 
-//  }
-// function suivant(){
-//   montre(questionpose[currentQuestionIndex])
-// }
-// //Fonction permettant d'afficher les questions et les réponses
-// function montre(question){
-//     questionElement.innerText = questions.question
-//     question.reponse.forEach(reponse => {
-//        const button = document.getElementById('ans')
-//        button.innerText = reponse.text
-//        if (reponse.correct){
-//            button.dataset.correct = reponse.correct
-//        }
-//        button.addEventListener('click',choisir)
+ }
+function suivant(){
+  montre(questionpose[currentQuestionIndex])
+}
+//Fonction permettant d'afficher les questions et les réponses
+function montre(question){
+    questionElement.innerText = questions.question
+    question.reponse.forEach(reponse => {
+       const button = document.getElementById('ans')
+       button.innerText = reponse.text
+       if (reponse.correct){
+           button.dataset.correct = reponse.correct
+       }
+       button.addEventListener('click',choisir)
     
-//    });
-// }
-// //Fonction pour choisir les réponses
-//    function choisir(e){
+   });
+}
+//Fonction pour choisir les réponses
+   function choisir(e){
 
-//    }
+   }
   
-//    //Création des questions
-//   const questions = [
-//     {
-//         question: 'Qui est le président de la France?',
-//         reponse : [
-//             {text: 'Joe Biden' ,correct : false },
-//             {text: 'Emmanuel Macron' ,correct : true }
+   //Création des questions
+  const questions = [
+    {
+        question: 'Qui est le président de la France?',
+        reponse : [
+            {text: 'Joe Biden' ,correct : false },
+            {text: 'Emmanuel Macron' ,correct : true }
            
-//         ]
-//     }
-//   ]
+        ]
+    }
+  ]
