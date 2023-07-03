@@ -4,7 +4,7 @@
     if(isset($_POST['deconnexion'])){
         session_destroy();
         unset($_POST['deconnexion']);
-        header("Location: index.php");
+        header("Location: /PrototypeW/PageConnexion/index.php");
         exit;
     }
 ?>

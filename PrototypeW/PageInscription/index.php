@@ -8,7 +8,7 @@
 <body>
 <img src="c:\Users\esther\Pictures\Image2.png" alt="">
     <h4>Inscription</h4>
-    <form action="" method="post">
+    <form action="processusinscription.php" method="post">
     
      <label for="name">Pseudo</label>
      <input type="text" name="name" required><br>
@@ -29,8 +29,6 @@
 
    
 
-
-<?php include "processusinscription.php"; ?>
 
 
 

@@ -1,5 +1,5 @@
 <?php           session_start();   
-                include "database.php";
+                include "../database.php";
                 global $db;
                 if(!isset($_SESSION['email'])){
                     header("Location: ../PageConnexion/index.php");
