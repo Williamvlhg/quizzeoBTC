@@ -12,5 +12,6 @@
          <input type="submit"  name='deconnexion' value="Déconnexion">
     </form>
     <?php include '../PageConnexion/processusdeconnexion.php'; ?>
+    <script src="index.js"></script>
 </body>
 </html>
