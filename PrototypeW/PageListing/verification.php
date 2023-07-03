@@ -1,5 +1,4 @@
-<?php              
-                session_start();
+<?php           session_start();   
                 include "database.php";
                 global $db;
                 if(!isset($_SESSION['email'])){

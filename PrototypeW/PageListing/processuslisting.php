@@ -8,7 +8,7 @@
             $kw[$i]="Titre like '%".$words[$i]."%'";
         }
 
-        $sql = $db->prepare("SELECT Titre FROM QUIZZ WHERE ".implode(" OR ",$kw));
+        $sql = $db->prepare("SELECT IdQz, Titre  FROM QUIZZ WHERE ".implode(" OR ",$kw));
         $sql->setFetchMode(PDO::FETCH_ASSOC);
         $sql->execute();
         $tab=$sql->fetchAll();
