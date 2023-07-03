@@ -1,7 +1,7 @@
     <?php include 'verification.php';?>
     <?php include '../header.php';?>
     <div>
-    <?php $affichage = 0; if($affichage == 1){?>
+        <?php $affichage = 0; if($affichage == 1){?>
         <form action="" method="get">
             <label for="Nquizz">Choisissez un nom pour votre quizz</label>
             <input type="text" name="NQuizz" required><br>
@@ -29,6 +29,7 @@
 
         <?php }?>
        
+    
 
 
     </div>
@@ -38,5 +39,6 @@
     </form>
     <?php include 'processusajout.php';?>
     <?php include '../PageConnexion/processusdeconnexion.php'; ?>
+    <script src="index.js"></script>
 </body>
 </html>
