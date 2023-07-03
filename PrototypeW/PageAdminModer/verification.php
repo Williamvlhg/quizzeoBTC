@@ -14,7 +14,7 @@
                 {
                     $data = $result->fetchAll();
                 } 
-                if($data[0]['Role'] != 2 && $data[0]['Role'] != 3){
+                if($data[0]['Role'] != 3){
                     header("Location: ../PageListing/index.php");
                     exit;
                 }
