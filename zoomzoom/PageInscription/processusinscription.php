@@ -11,14 +11,14 @@
             echo "Vos mots de passes ne correspondent pas";
         } else {
         $p = password_hash($p, PASSWORD_DEFAULT); 
-        $sql = $db->prepare("INSERT INTO user(Username, Email, mdp, Role) VALUES ( :Username, :Email, :mdp, 1);");
+        $sql = $db->prepare("INSERT INTO User(Username, email, mdp, Role) VALUES ( :Username, :email, :password, 1);");
         $sql -> execute([
             'Username' => $u,
-            'Email' => $e,
+            'email' => $e,
             'mdp' => $p
         ]);
-        };
-    };
+        }
+    }
 
 ?>
 
