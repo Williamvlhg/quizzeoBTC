@@ -1,5 +1,5 @@
-    <?php include 'verification.php';?>
-    <?php include '../header.php';?>
+    <?php include 'verification.php'?>
+    <?php include 'header.php'?>
     <div>
     <?php $affichage = 0; if($affichage == 1){?>
         <form action="" method="get">
