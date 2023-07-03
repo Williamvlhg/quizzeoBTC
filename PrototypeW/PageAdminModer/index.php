@@ -16,8 +16,8 @@ $result = $db->query($sql);while  ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
             <td><?php echo $row['ID']; ?></td>
             <td><?php echo $row['Username']; ?></td>
             <td>
-                <a href="processussupprimer.php?delete=<?php echo $row['ID']; ?>">Supprimer</a><br>
-                <a href="processusmodifier.php?modify=<?php echo $row['ID']; ?>">Modifier</a>
+                <a href="processusmodifier.php?modify=<?php echo $row['ID']; ?>">Modifier</a><br>
+                <a href="processussupprimer.php?delete=<?php echo $row['ID']; ?>">Supprimer</a>
             </td>
             
         </tr>
