@@ -1,15 +1,15 @@
     <?php include 'verification.php'?>
     <?php include '../header.php'?>
     <div>
-        <?php $affichage = 0; if($affichage == 1){?>
+        <?php $affichage = 0; if($affichage == 0){;?>
         <form action="" method="get">
             <label for="Nquizz">Choisissez un nom pour votre quizz</label>
             <input type="text" name="NQuizz" required><br>
 
             <input type="submit" name='vquiz' value="Valider le nom du quizz">
         </form>
-        <?php }?>
-        <?php if(isset($_GET['vquiz']) || $affichage == 0){ $affichage = 1;?>
+        <?php } ?>
+        <?php if(isset($_GET['vquiz'])){ $affichage = 1;} if ($affichage == 1){?>
             <form method="get" action="">
             <?php $i = 1; if ($i <= 20) { ?>
                 <h3>Question <?php echo $i; ?>:</h3>
@@ -33,12 +33,7 @@
 
 
     </div>
-
-    <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
-         <input type="submit"  name='deconnexion' value="Déconnexion">
-    </form>
     <?php include 'classquizz.php';?>
-    <?php include '../PageConnexion/processusdeconnexion.php'; ?>
     <script src="index.js"></script>
 </body>
 </html>
