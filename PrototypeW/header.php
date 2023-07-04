@@ -63,6 +63,11 @@
         <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
             <a  class="nav-link" href="../PageAdminModer/index.php">Liste des Utilisateurs</a>
         </li>
+        <li>
+            <form method="post">
+            <input type="submit" name='deconnexion' value="Déconnexion">
+            </form>
+        </li>
      
 =======
             <li class="nav-item">
@@ -85,7 +90,7 @@
 >>>>>>> Stashed changes
 
         </ul>
-
+        <?php include "processusdeconnexion.php"?>
     </div>
 <<<<<<< Updated upstream
     </nav>  

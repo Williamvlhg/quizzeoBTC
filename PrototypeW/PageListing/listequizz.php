@@ -24,10 +24,6 @@
     <form method="post" action="../PageTransiQuizzeur/index.php" class='btn btn-light'>
          <input type="submit"  name='CreaQuizz' value="Créer un quizz">
     </form>
-    <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
-         <input type="submit" name='deconnexion' value="Déconnexion">
-    </form>
 
-    <?php include 'processusdeconnexion.php';?>
 </body>
 </html>

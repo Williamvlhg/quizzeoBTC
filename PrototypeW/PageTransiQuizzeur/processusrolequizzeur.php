@@ -1,6 +1,6 @@
 <?php   
         session_start();   
-        include "database.php";
+        include "../database.php";
         $sql1 = "SELECT * FROM user WHERE Email = :Email"; 
                 $result = $db->prepare($sql1);
                 $result->execute([

@@ -1,6 +1,6 @@
 
 <?php
-    include "database.php";
+    include "../database.php";
     global $db;
     if(isset($_POST["submit"]))
     {

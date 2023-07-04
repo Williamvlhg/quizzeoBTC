@@ -12,6 +12,9 @@
 <body>
     <?php if (isset($_SESSION['email'])){
         echo "Vous êtes connecté en tant que : ". $_SESSION['email'];
+        ?> <form method="post">
+        <input type="submit" name='deconnexion' value="Déconnexion">
+        </form> <?php
         }
         else
         { ?> 
@@ -25,15 +28,15 @@
      <input type="password" name="pwd" ><br>
 
      <input type="submit" name="submit" value="Valider">
-
+     <a href="../PageInscription/index.php"> Vous ne possedez pas de compte ? Inscrivez-vous ! </a>
 
     </form>
             <?php
         }?>
 
 
-
 <?php include "processusconnexion.php"; ?>
+<?php include "processusdeconnexion.php"; ?>
 
 
 
