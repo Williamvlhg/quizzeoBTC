@@ -37,7 +37,7 @@
     <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
          <input type="submit"  name='deconnexion' value="Déconnexion">
     </form>
-    <?php include 'processusajout.php';?>
+    <?php include 'classquizz.php';?>
     <?php include '../PageConnexion/processusdeconnexion.php'; ?>
     <script src="index.js"></script>
 </body>

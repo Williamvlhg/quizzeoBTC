@@ -30,9 +30,6 @@
             <li class="nav-item">
             <a  class="nav-link" href="#">Classements</a>
         </li>
-        <li class="nav-item">
-            <a  class="nav-link" href="#" <?php if($data[0]['Role'] != 2 && $data[0]['Role'] != 3) {?>style="display:none"<?php }?>>Quiz enregistrés</a>
-        </li>
         <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
             <a  class="nav-link" href="">Liste des Quizz</a>
         </li>

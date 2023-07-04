@@ -16,7 +16,7 @@
             'Email' => $e,
             'mdp' => $ph
         ]);
-        header("Location : ../PageConnexion/index.php");
+        header('Location: ../PageConnexion/index.php');
         }
     }
 
