@@ -1,34 +1,48 @@
     <?php include 'verification.php'?>
-    <?php include '../header.php'?>
-    <div>
-        <?php $affichage = 0; if($affichage == 0){;?>
-        <form action="" method="get">
-            <label for="Nquizz">Choisissez un nom pour votre quizz</label>
-            <input type="text" name="NQuizz" required><br>
+    <?php include '../header.php';?>
+    <?php include 'processusajout.php';?>
 
-            <input type="submit" name='vquiz' value="Valider le nom du quizz">
-        </form>
-        <?php } ?>
-        <?php if(isset($_GET['vquiz'])){ $affichage = 1;} if ($affichage == 1){?>
-            <form method="get" action="">
-            <?php $i = 1; if ($i <= 20) { ?>
-                <h3>Question <?php echo $i; ?>:</h3>
-                <input type="text" name="question_<?php echo $i; ?>" placeholder="Question" required>
-                <br>
-                <?php for ($j = 1; $j <= 4; $j++) { ?>
-                <input type="radio" name="answer_<?php echo $i; ?>" value="<?php echo $j; ?>" required>
-                <input type="text" name="option_<?php echo $i; ?>_<?php echo $j; ?>" placeholder="Option <?php echo $j; ?>" required>
-                <br>
-                <?php } $i++; ?>
-                <input type="submit" name="next-question" value="Prochaine Question">
-                <br>
-            <?php } else if($i>20){ $affichage = 0;?>
-            <input type="submit" name="add-quizz" value="Valider votre quizz">
-            <?php }?>
-            </form>
+    <h1>Quiz Registration</h1>
 
-        <?php }?>
-       
+<?php var_dump($_SESSION);if ($currentStep === 1) { ?>
+    <!-- Étape 1: Nom et Email -->
+    <form action="" method="post">
+        <label for="titre-quiz">Titre du quizz:</label>
+        <input type="text" name="titre-quiz" id="titre-quiz" required><br>
+
+        <label for="diff">Difficulté:</label>
+        <select name="diff" required>
+            <option value="">Select</option>
+            <option value="1">facile</option>
+             <option value="2">moyen</option>
+             <option value="3">difficile</option>
+        </select>
+
+        <button type="submit" name="suivant">Suivant</button>
+    </form>
+<?php } elseif ($currentStep != 1 && $currentStep < 21) { ?>
+    <!-- Étape 2: Autres informations -->
+    <form action="" method="post">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <button type="submit" name='suivant'>Suivant</button>
+        <button type="submit" name="suppr">Supprimer le Quizz</button>
+    </form>
+<?php } else { ?>
+    <!-- Étape finale: Formulaire terminé -->
+    <p>Quiz registration completed!</p>
+<?php } ?>
+</body>
+</html>
     
 
 

@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
     <?php include 'verification.php';?>
     <?php include '../header.php';?>
     <?php include 'processuslisting.php';?>
-=======
-<?php include "../header.php" ?>
->>>>>>> Stashed changes
     <br><br>
 
     <form name="for" method="get" action="">
