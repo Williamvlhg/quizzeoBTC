@@ -28,13 +28,16 @@
         </li>
     
             <li class="nav-item">
-            <a  class="nav-link" href="#">Score</a>
+            <a  class="nav-link" href="../PageScore/index.php">Score</a>
         </li>
-        <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
-            <a  class="nav-link" href="">Liste des Quizz</a>
+        <li class="nav-item" <?php if($data[0]['Role'] != 2 && $data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
+            <a  class="nav-link" href="../PageListQuizzeur/index.php">Liste des Quizz</a>
         </li>
         <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
             <a  class="nav-link" href="../PageAdminModer/index.php">Liste des Utilisateurs</a>
+        </li>
+        <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
+            <a  class="nav-link" href="../PageListQuizzeurAdmin/index.php">Liste des Quizz(admin)</a>
         </li>
         <li>
             <form method="post">
