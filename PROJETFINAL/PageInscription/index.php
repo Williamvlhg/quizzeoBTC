@@ -23,6 +23,7 @@
      <input type="password" name="pwd2" required><br>
 
      <input type="submit" name="submit" value="Valider">
+     <a href="../PageConnexion/index.php"> Vous possedez un compte ? Connectez-vous !</a>
 
 
     </form>
