@@ -1,7 +1,9 @@
 <?php
 
 include 'verification.php';
-include '../header.php';
+include '../header.php';?>
+<link rel="stylesheet" href="modif.css">
+<?php
 if (isset($_GET['modify'])) {
     $id = $_GET['modify'];
 
@@ -44,7 +46,7 @@ if (isset($_GET['modify'])) {
             <label for="Reponse4">Réponse 4:</label>
             <input type="text" name="Reponse4" id="Reponse4">
             <input type="radio" for="Reponse4" name="BReponse" value="brep4"><br>
-            <input type="submit" name="modifier" value="Modifier le quizz">
+            <button class="btn btn-warning" type="submit" name="modifier" value="Modifier le quizz">Modifier le quizz</button>
         </form>
 
     <?php
