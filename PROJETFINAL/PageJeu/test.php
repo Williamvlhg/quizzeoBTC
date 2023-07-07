@@ -38,19 +38,8 @@ $idquizz = $_SESSION['idquizz'];
         $tab2=$req2->fetchAll();
         for($y=0; $y<count($tab2); $y++){
             ?>
-
-<!-- <div class="container text-center">
-    <div class="row w-50"> 
-      <button id="ans1" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 1 </button>
-      <button id="ans2" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 2 </button>
-      <div class="w-100"></div>
-      <button id="ans3" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 3 </button>
-      <button id="ans4" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 4 </button>
-    </div>
-  </div> -->
-
-             <div id="answer-button" class="btn-grid">
-        <input type="button" name="ans" onclick="plusSlides(<?php echo $tab2[$y]['Breponse'];?>)" value="<?php echo $tab2[$y]['reponse']; echo $tab2[$y]['Breponse'];?>">
+        <div id="answer-button" class="btn-grid">
+        <input type="button" name="ans" onclick="plusSlides(<?php echo $tab2[$y]['Breponse'];?>)" value="<?php echo $tab2[$y]['reponse'];?>">
         </div>
     <?php
         }
@@ -66,7 +55,7 @@ $idquizz = $_SESSION['idquizz'];
         <input type="submit"  value="Terminer">
     </form>
 
-    <script src="test.js"></script>
+    <script src="jeu.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
 </body></center>
 </html>

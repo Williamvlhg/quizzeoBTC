@@ -13,6 +13,7 @@
     <h4>
     <?php if (isset($_SESSION['email'])){
         echo "Vous êtes connecté en tant que : ". $_SESSION['email'];
+        header('location: ../PageListing/index.php');
         ?> <form method="post">
     <h4> 
         <br>

@@ -7,63 +7,96 @@ include '../header.php';?>
 if (isset($_GET['modify'])) {
     $id = $_GET['modify'];
 
-    $sql = "SELECT * FROM quizz WHERE IdQz = :IdQz";
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam(':IdQz', $id);
-    $stmt->execute();
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $sql1 = "SELECT * FROM quizz WHERE IdQz = :IdQz";
+    $stmt1 = $db->prepare($sql1);
+    $stmt1->bindParam(':IdQz', $id);
+    $stmt1->execute();
+    $quizzinfo = $stmt1->fetch(PDO::FETCH_ASSOC);
     ?>
-        <h2>Modification du profil du Quizz <?php echo $user['Titre']; ?></h2>
+        <h2>Modification du profil du Quizz <?php echo $quizzinfo['Titre']; ?></h2>
         <form method="POST" action="">
-            <input type="hidden" name="ID" value="<?php echo $user['IdQz']; ?>">
+            <input type="hidden" name="ID" value="<?php echo $quizzinfo['IdQz']; ?>">
 
             <label for="Username">Titre:</label>
-            <input type="text" name="Titre" id="Titre" value="<?php echo $user['Titre']; ?>" required><br>
+            <input type="text" name="Titre" id="Titre" value="<?php echo $quizzinfo['Titre']; ?>" required><br>
 
 
             <label for="">Difficulté:</label>
-            <input type="number" name="diff" id="diff" value="<?php echo $user['Difficulte']; ?>" required><br>
+            <input type="number" name="diff" id="diff" value="<?php echo $quizzinfo['Difficulte']; ?>" required><br>
+            <button class="btn btn-warning" type="submit" name="modifier-quizz" value="Modifier le Quizz">Modifier le quizz</button><br>
+            </form>
+        <?php  
+        $sql2 = "SELECT *
+        FROM question
+        WHERE IDQuizz LIKE '".$id."'";
+        $result2 = $db->query($sql2);  while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) { 
+     ?>
+        <form method="POST" action="">
+            <input type="hidden" name="IdQt" value="<?php echo $row2['IdQt']; ?>">
+            <input type="text" name="Question" id="Question" value="<?php echo $row2['intituléQuestion'];?>" required><br>
+            <input type="text" name="diffq" id="diffq" value="<?php echo $row2['Difficulte'];?>" required>
+            <button class="btn btn-warning" type="submit" name="modifier-question" value="Modifier la question">Modifier la Question</button><br>
+            </form>
+            <?php 
+             $sql = "SELECT *
+             FROM choix
+             WHERE IDQuestion LIKE '".$row2['IdQt']."'";
+             $result = $db->query($sql);  while ($row = $result->fetch(PDO::FETCH_ASSOC)){ 
+            ?>
+            <form method="POST" action="">
+            <input type="hidden" name="IdC" value="<?php echo $row['IdC']; ?>">
+            <label for="Reponse1">Réponse :</label>
+            <input type="text" name="Reponse1" id="Reponse1" value='<?php echo $row['reponse'];?>' required>
+            <input type="text" name="BReponse" value="<?php echo $row['Breponse']; ?>" required><br>
+            <br>
+            <button class="btn btn-warning" type="submit" name="modifier-choix" value="Modifier la Réponse">Modifier la réponse</button><br>
+            </form>
+            <?php } 
+        
 
-
-            <label for="Question">Question :</label>
-            <input type="text" name="Question" id="Question"><br>
-            <label for="diffq">Difficulté:</label>
-            <select name="diff">
-                <option value="">Select</option>
-                <option value="1">facile</option>
-                <option value="2">moyen</option>
-                <option value="3">difficile</option>
-            </select><br>
-            <label for="Reponse1">Réponse 1:</label>
-            <input type="text" name="Reponse1" id="Reponse1">
-            <input type="radio" for="Reponse1" name="BReponse" value="brep1"><br>
-            <label for="Reponse2">Réponse 2:</label>
-            <input type="text" name="Reponse2" id="Reponse2">
-            <input type="radio" for="Reponse2" name="BReponse" value="brep2"><br>
-            <label for="Reponse3">Réponse 3:</label>
-            <input type="text" name="Reponse3" id="Reponse3">
-            <input type="radio" for="Reponse3" name="BReponse" value="brep3"><br>
-            <label for="Reponse4">Réponse 4:</label>
-            <input type="text" name="Reponse4" id="Reponse4">
-            <input type="radio" for="Reponse4" name="BReponse" value="brep4"><br>
-            <button class="btn btn-warning" type="submit" name="modifier" value="Modifier le quizz">Modifier le quizz</button>
-        </form>
-
-    <?php
-    if (isset($_POST['modifier'])) {
+  }
+    if (isset($_POST['modifier-quizz'])) {
         $id = $_POST['ID'];
-        $username = $_POST['Titre'];
-        $email = $_POST['Difficulte'];
+        $Titre= $_POST['Titre'];
+        $Difficulte = $_POST['diff'];
 
     
-        $sql = "UPDATE quizz SET Titre = :Titre, Difficulte = :Difficulte WHERE ID = :ID";
+        $sql = "UPDATE quizz SET Titre = :Titre, Difficulte = :Difficulte WHERE IdQz = :IdQz";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':Titre', $Titre);
         $stmt->bindParam(':Difficulte', $Difficulte);
-        $stmt->bindParam(':ID', $id);
+        $stmt->bindParam(':IdQz', $id);
         $stmt->execute();
-        header("location: index.php");
     }
+        if (isset($_POST['modifier-question'])) {
+            $id = $_POST['IdQt'];
+            $question = $_POST['Question'];
+            $Difficulte = $_POST['diffq'];
+
+        
+            $sql = "UPDATE question SET intituléQuestion = :intituléQuestion, Difficulte = :Difficulte WHERE IdQt = :IdQt";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(':intituléQuestion', $question);
+            $stmt->bindParam(':Difficulte', $Difficulte);
+            $stmt->bindParam(':IdQt', $id);
+            $stmt->execute();
+        }
+    
+    if (isset($_POST['modifier-choix'])) {
+        $id = $_POST['IdC'];
+        $reponse1= $_POST['Reponse1'];
+        $Breponse = $_POST['BReponse'];
+
+    
+        $sql = "UPDATE choix SET reponse = :reponse, Breponse = :Breponse WHERE IdC = :IdC";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':reponse', $reponse1);
+        $stmt->bindParam(':Breponse', $Breponse);
+        $stmt->bindParam(':IdC', $id);
+        $stmt->execute();
     }
+    
+    
+}
 
 ?>

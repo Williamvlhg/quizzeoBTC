@@ -27,7 +27,6 @@ $result = $db->query($sql);while  ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
 </table>
 
     <?php include '../PageConnexion/processusdeconnexion.php'; ?>
-    <script src="index.js"></script>
     
 </body>
 </html>

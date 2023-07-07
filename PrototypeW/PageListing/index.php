@@ -34,7 +34,7 @@
         <br>
         <div class="row">
             <div class="col-3 align-self-end border rounded-left rounded-right-75 bg-dark">
-                <a  class="nav-link" href="listequizz.php">QUIZZ DES QUIZZEURS</a>
+                <a  class="nav-link" href="listquizz.php">QUIZZ DES QUIZZEURS</a>
             </div>
         </div>
     </div>

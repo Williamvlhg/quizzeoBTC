@@ -2,7 +2,7 @@
 <?php include '../header.php'?>
 <link rel="stylesheet" href="index.css">
 
-<h1>Liste des Quizz</h1>
+<h1>Liste des Quizz ADMIN</h1>
 
 
 <table>

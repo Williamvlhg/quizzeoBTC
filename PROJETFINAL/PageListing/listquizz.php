@@ -1,6 +1,7 @@
     <?php include 'verification.php';?>
     <?php include '../header.php';?>
     <?php include 'processuslisting.php';?>
+    <link rel="stylesheet" href="index1.css">
     <br><br>
 
     <form name="for" method="get" action="">
@@ -18,7 +19,7 @@
     </div> 
     <?php } ?>
     <form method="post" action="../PageTransiQuizzeur/index.php" class='btn btn-light'>
-         <input type="submit"  name='CreaQuizz' value="Créer un quizz">
+         <input type="submit" class="btn btn-secondary" name='CreaQuizz' value="Créer un quizz">
     </form>
 
 </body>
