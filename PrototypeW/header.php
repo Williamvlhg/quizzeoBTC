@@ -14,7 +14,7 @@
     </head>
      <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" >
             <img src="../img/Image2.png" alt="logo" style="width: 70px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

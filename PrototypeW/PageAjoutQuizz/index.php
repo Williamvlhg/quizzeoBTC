@@ -11,8 +11,7 @@
         <input type="text" name="titre-quiz" id="titre-quiz" required><br>
 
         <label for="diff">Difficulté:</label>
-        <select name="diff" required>
-            <option value="">Select</option>
+        <select name="diff" required>   
             <option value="1">facile</option>
              <option value="2">moyen</option>
              <option value="3">difficile</option>
@@ -26,8 +25,7 @@
         <label for="Question">Question <?php echo $currentStep-1; ?>:</label>
         <input type="text" name="Question" id="Question"><br>
         <label for="diff">Difficulté:</label>
-        <select name="diff">
-            <option value="">Select</option>
+        <select name="diff">    
             <option value="1">facile</option>
              <option value="2">moyen</option>
              <option value="3">difficile</option>

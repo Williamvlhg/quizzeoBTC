@@ -35,7 +35,7 @@ $idquizz = $_SESSION['idquizz'];
         for($y=0; $y<count($tab2); $y++){
             ?>
              <div id="answer-button" class="btn-grid">
-        <input type="button" name="ans" onclick="plusSlides(<?php echo $tab2[$y]['Breponse'];?>)" value="<?php echo $tab2[$y]['reponse']; echo $tab2[$y]['Breponse'];?>">
+        <input type="button" name="ans" onclick="plusSlides(<?php echo $tab2[$y]['Breponse'];?>)" value="<?php echo $tab2[$y]['reponse'];?>">
         </div>
     <?php
         }
