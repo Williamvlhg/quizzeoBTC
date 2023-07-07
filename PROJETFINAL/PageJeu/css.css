@@ -1,9 +1,10 @@
 body{
     background-color: #086375;
+    font-family:"Allerta";
 }
 
-.toto{
-    background-color:#353a41 ;
+h4{
+    color:blanchedalmond;
 }
 
 #Countdown{
@@ -17,11 +18,10 @@ body{
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    font-family: system-ui;
+    font-family: fantasy;
     color:blanchedalmond;
     background-color:black;
     font-size: 54px;
-
 
 }
 .testquizz{
@@ -34,7 +34,6 @@ body{
     font-size: 40px;
     
 }
-
 .row{
     position: absolute;
     top: 65%;

@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-
+        
       
     
     </head>
@@ -39,14 +39,15 @@
         <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
             <a  class="nav-link" href="../PageListQuizzeurAdmin/index.php">Liste des Quizz(admin)</a>
         </li>
-        <li>
-            <form method="post">
-            <input type="submit" name='deconnexion' value="Déconnexion">
+        <li class="nav-item">
+        <div class="d-grid gap-2 col-6 justify-content-md-end">
+    <form method="post" >
+        <button type="submit"  class="btn btn-danger" name='deconnexion' value="Déconnexion">Déconnexion</button>
             </form>
+        </div>
         </li>
-     
-
         </ul>
         <?php include "processusdeconnexion.php"?>
     </div>
     </nav>  
+

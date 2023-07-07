@@ -1,7 +1,9 @@
 <?php
 
 include 'verification.php';
-include '../header.php';
+include '../header.php';?>
+<link rel="stylesheet" href="modif.css">
+<?php
 if (isset($_GET['modify'])) {
     $id = $_GET['modify'];
 
@@ -12,6 +14,7 @@ if (isset($_GET['modify'])) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     ?>
         <h2>Modification du profil de <?php echo $user['Username']; ?></h2>
+        <h4>
         <form method="POST" action="">
             <input type="hidden" name="ID" value="<?php echo $user['ID']; ?>">
 
@@ -26,9 +29,11 @@ if (isset($_GET['modify'])) {
 
             <label for="Role">Role:</label>
             <input type="texte" name="Role" id="Role" value="<?php echo $user['Role']; ?>" required><br>
-
-            <input type="submit" name="modifier" value="Modifier l'utilisateur">
+            <h4>
+            <br>
+            <button class="btn btn-warning" type="submit" name="modifier" value="Modifier l'utilisateur">Modifier l'utilisateur</button>
         </form>
+</body>
     <?php
     if (isset($_POST['modifier'])) {
         $id = $_POST['ID'];

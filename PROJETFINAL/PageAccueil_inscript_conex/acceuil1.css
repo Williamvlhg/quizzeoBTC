@@ -1,24 +1,21 @@
 body{
-     background-image: radial-gradient(rgb(221, 201, 201) 1px ,transparent 0),
-   radial-gradient(rgb(255, 255, 0) 1px, transparent 0);
+     background-image: radial-gradient(rgb(221, 201, 201) 1px ,transparent 0);
     background-size: 42px 42px;
     background-position: 0 0 ,21px 21px;
     animation: infinite color 5s alternate;
+    font-family:'Allerta';
 }
 
 @keyframes color{
     
- 0% {background-color: rgb(106, 0, 255)};
-  25%{background-color: rgb(7, 7, 234);}  
-  50%{background-color: rgb(7, 194, 166);} 
-  100%{background-color: rgb(10, 223, 102);} 
+  0%{background-color: #06424e;}
+  25%{background-color: #086375;}  
+  50%{background-color: #0a6e82;}
+  100%{background-color: #108fa9;}
   to{
     background-position: 21px 21px, 0 0;
 }
  }   
-
-
-
 
 img{
     width: 400px;
@@ -41,10 +38,9 @@ img{
  }
  
 p{
-    font-family:'Sofia',sans-serif;
-    color:rgb(220, 249, 0);
+    color:blanchedalmond;
     text-align: center;
-    font-size: xx-large;
+    font-size: 400%;
     animation-duration: 5s;
     animation-name:phrase;
 }
@@ -59,20 +55,14 @@ p{
  
 
 button{
-    width: 100px;
-    height: 70px;
+    width: 150px;
+    height: 100px;
     border-radius: 30%;
    display: block;
-  margin-left:auto;
-  margin-right: auto;
   cursor: pointer;
   color:rgb(240, 242, 244);
-  background-color: rgb(34, 91, 224);
+  background-color:(34, 91, 224);
   box-shadow: 0 9px #403f3f;
   
-}button:active{
-        background-color: #3e8e41;
-        box-shadow: 0 5px #403f3f;
-        transform: translateY(4px);
 }
 
