@@ -1,5 +1,7 @@
 <?php include "verification.php";
-    include '../header.php';
+    include '../header.php';?>
+    <link rel="stylesheet" href="result.css">
+    <center><?php
 if(isset($_POST['score'])){
     $score = $_POST['score'];
     $IDCurrentUser = $data[0]['ID'];
@@ -19,9 +21,11 @@ if(isset($_POST['score'])){
                     $dataQuizz = $result2->fetchAll();
                 } 
     ?>
+    <br>
     <div>   
         <h2>Voici votre Score : <?php echo $score ?>/<?php echo count($dataQuizz)?></h2>
     </div>
+    </body></center>
     <?php
     if(empty($dataScore)){
         $sql = "INSERT INTO score(Score,IDQuizz,IDJoueur) VALUES (" . $score." , " . $IDCurrentQuizz. ", " . $IDCurrentUser . ")";
