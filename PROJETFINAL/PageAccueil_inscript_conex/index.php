@@ -18,7 +18,6 @@
 
               <p class="font-effect-fire"><b>Bienvenue sur QUIZZEO !</b></p><br>
 
-<div class="d-grid gap-2 col-1 mx-auto">
     <button class="btn btn-info btn-outline-dark" onclick="window.location.href='../PageInscription/index.php'"><h4>Inscription</h4></button>
     <br>
     <br>  

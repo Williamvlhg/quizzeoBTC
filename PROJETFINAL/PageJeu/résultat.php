@@ -21,6 +21,7 @@ if(isset($_POST['score'])){
                     $dataQuizz = $result2->fetchAll();
                 } 
     ?>
+    <br>
     <div>   
         <br>
         <h2>Voici votre Score : <?php echo $score ?>/<?php echo count($dataQuizz)?></h2>
