@@ -1,6 +1,9 @@
     <?php include 'verification.php'?>
     <?php include '../header.php'?>
+    <body><center>
+    <link rel="stylesheet" href="index.css">
     <div>
+        <h4>
         <?php $affichage = 0; if($affichage == 1){?>
         <form action="" method="get">
             <label for="Nquizz">Choisissez un nom pour votre quizz</label>
@@ -16,11 +19,14 @@
                 <input type="text" name="question_<?php echo $i; ?>" placeholder="Question" required>
                 <br>
                 <?php for ($j = 1; $j <= 4; $j++) { ?>
+                <br>
                 <input type="radio" name="answer_<?php echo $i; ?>" value="<?php echo $j; ?>" required>
+        
                 <input type="text" name="option_<?php echo $i; ?>_<?php echo $j; ?>" placeholder="Option <?php echo $j; ?>" required>
                 <br>
                 <?php } $i++; ?>
-                <input type="submit" name="next-question" value="Prochaine Question">
+                <br>
+                <button class="btn btn-dark" type="submit" name="next-question" value="Prochaine Question"><h3>Prochaine Question<h3></button>
                 <br>
             <?php } else if($i>20){ $affichage = 0;?>
             <input type="submit" name="add-quizz" value="Valider votre quizz">
@@ -31,14 +37,12 @@
        
     
 
-
+        <h4>
     </div>
 
-    <form method="post" class='position-absolute top-0 end-0 btn btn-light'>
-         <input type="submit"  name='deconnexion' value="Déconnexion">
-    </form>
+  
     <?php include 'classquizz.php';?>
     <?php include '../PageConnexion/processusdeconnexion.php'; ?>
     <script src="index.js"></script>
-</body>
+</body></center>
 </html>

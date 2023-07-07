@@ -1,0 +1,22 @@
+body{
+    background-color: #086375;
+    font-family:"Allerta";
+    
+}
+.table{
+    padding-left: 20%;
+}
+a{
+    color:rgb(244, 111, 2);
+}
+th{
+    color:rgb(178, 175, 205);
+}
+
+td{
+    color: blanchedalmond;
+}
+
+h1{
+    color: blanchedalmond;
+}

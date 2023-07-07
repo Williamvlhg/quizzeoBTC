@@ -8,10 +8,11 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-        <link rel="stylesheet" href="../src/main.css">
-
+        
+      
+    
     </head>
-    <body>
+     <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
             <img src="../img/Image2.png" alt="logo" style="width: 70px;">
@@ -27,24 +28,26 @@
         </li>
     
             <li class="nav-item">
-            <a  class="nav-link" href="#">Classements</a>
+            <a  class="nav-link" href="../PageScore/index.php">Score</a>
         </li>
-        <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
-            <a  class="nav-link" href="">Liste des Quizz</a>
+        <li class="nav-item" <?php if($data[0]['Role'] != 2 && $data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
+            <a  class="nav-link" href="../PageListQuizzeur/index.php">Liste des Quizz</a>
         </li>
         <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
             <a  class="nav-link" href="../PageAdminModer/index.php">Liste des Utilisateurs</a>
         </li>
+        <li class="nav-item" <?php if($data[0]['Role'] != 3) {?>style="display:none"<?php }?>>
+            <a  class="nav-link" href="../PageListQuizzeurAdmin/index.php">Liste des Quizz(admin)</a>
+        </li>
         <li class="nav-item">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <form method="post">
-            <input type="submit" name='deconnexion' value="Déconnexion">
-        </div>
+        <div class="d-grid gap-2 col-6 justify-content-md-end">
+    <form method="post" >
+        <button type="submit"  class="btn btn-danger" name='deconnexion' value="Déconnexion">Déconnexion</button>
             </form>
+        </div>
         </li>
         </ul>
-
-        
         <?php include "processusdeconnexion.php"?>
     </div>
     </nav>  
+

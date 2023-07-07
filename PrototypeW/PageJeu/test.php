@@ -1,12 +1,16 @@
 <?php include "verification.php";
 include "../header.php"; ?>
+<link rel="stylesheet" href="css.css">
     <div class="Timer" <?php if(!isset($_POST['start-game'])){ ?> style="display:none" <?php } else { ?> style="display:block" <?php } ?>>
         <p id="Countdown"></p>
     </div>
-
+<body><center>
 <?php if(!isset($_POST['start-game'])){?>
     <form method="post">
-  <input id="submit" type="submit" name="start-game" value="Commencer le jeu">
+<br>
+<br>
+
+<button class="btn btn-info" id="submit" type="submit" name="start-game" value="Commencer le jeu"><h4>Commencer le jeu<h4></button>
 </form>
 <?php } else $_SESSION['score'] = 0;?>
  <?php
@@ -23,7 +27,7 @@ $idquizz = $_SESSION['idquizz'];
     for($i=0; $i<count($tab); $i++){
     ?>
     <div class="hide">
-     <label  id="question" for="question"><?php echo $tab[$i]['intituléQuestion'] ?></label>
+    <h4><label  id="question" for="question"><?php echo $tab[$i]['intituléQuestion'] ?></label><h4>
      <?php
         $idquestion = ($idquizz*20)+$i+1;
         $req2 = $db->prepare("SELECT * FROM CHOIX WHERE IdQuestion like :IdQuestion");
@@ -34,6 +38,17 @@ $idquizz = $_SESSION['idquizz'];
         $tab2=$req2->fetchAll();
         for($y=0; $y<count($tab2); $y++){
             ?>
+
+<!-- <div class="container text-center">
+    <div class="row w-50"> 
+      <button id="ans1" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 1 </button>
+      <button id="ans2" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 2 </button>
+      <div class="w-100"></div>
+      <button id="ans3" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 3 </button>
+      <button id="ans4" type="button" class="p-3 w-60 col-lg-6 btn btn-light border-dark border w-10 btn-lg btn-block">rep 4 </button>
+    </div>
+  </div> -->
+
              <div id="answer-button" class="btn-grid">
         <input type="button" name="ans" onclick="plusSlides(<?php echo $tab2[$y]['Breponse'];?>)" value="<?php echo $tab2[$y]['reponse']; echo $tab2[$y]['Breponse'];?>">
         </div>
@@ -51,7 +66,7 @@ $idquizz = $_SESSION['idquizz'];
         <input type="submit"  value="Terminer">
     </form>
 
-    <script src="testt.js"></script>
+    <script src="test.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
-</body>
+</body></center>
 </html>
